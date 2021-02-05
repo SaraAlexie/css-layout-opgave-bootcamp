@@ -1,0 +1,80 @@
+body, html{
+    margin: 0;
+    padding: 0;
+}
+
+.body{
+    display: grid;
+}
+
+h1, h2, h3{
+    text-align: center;
+}
+
+.body__header{
+    background-color: aquamarine;
+}
+
+.body__section{
+    background-color: coral;
+}
+
+.body__sign-up{
+    background-color: darkgray;
+}
+
+.body__feature1{
+    background-color: darkviolet;
+}
+
+.body__feature2{
+    background-color: chocolate;
+}
+
+.body__feature3{
+    background-color: olive;
+}
+
+
+@media screen and (min-width: 500px){
+
+    .body{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .body__header, .body__section{
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+}
+
+@media screen and (min-width: 900px){
+
+    .body{
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .body__header{
+        grid-column-start: 1;
+        grid-column-end: 4;
+    }
+
+    .body__feature1, .body__feature2, .body__feature3{
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+
+    .body__sign-up{
+        grid-row-start: 3;
+        grid-row-end: 4;
+        grid-column-start: 1;
+        grid-column-end: 4;
+    }
+
+    .body__section{
+        grid-row-start: 4;
+        grid-row-end: 5;
+        grid-column-start: 1;
+        grid-column-end: 4;
+    }
+}
